@@ -14,7 +14,7 @@ import m4t_tester
 
 
 def main():
-    """ Calls the   TEST   functions in this module. """
+    """ Calls the   TEST   functions in this module. """""
     run_test_sum_of_digits()
     run_test_digits_in_cube()
     run_test_digits_in_power()
