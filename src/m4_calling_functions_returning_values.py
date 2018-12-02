@@ -256,7 +256,7 @@ def run_test_fancy_sums_of_digits():
 
     """ Tests the   fancy_sums_of_digits   function. """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement this function.
+    # DONE: 7. Implement this function.
     #   It TESTS the  fancy_sums_of_digits  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -268,18 +268,18 @@ def run_test_fancy_sums_of_digits():
     print('Testing the   fancy_sums_of_digits   function:')
     print('--------------------------------------------------')
 
-    expected = 1
-    answer = fancy_sums_of_digits(10)
+    expected = 30888
+    answer = fancy_sums_of_digits(3)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = 1
-    answer = fancy_sums_of_digits(20)
+    expected = 79866
+    answer = fancy_sums_of_digits(12)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = 1
-    answer = fancy_sums_of_digits(30)
+    expected = 94644
+    answer = fancy_sums_of_digits(18)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
@@ -322,7 +322,7 @@ def fancy_sums_of_digits(n):
     z = sum_of_digits(x ** y)
     return z
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #
     ###########################################################################
     # IMPORTANT: CALL, as many times as needed,
