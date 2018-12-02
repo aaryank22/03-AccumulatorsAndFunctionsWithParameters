@@ -14,7 +14,7 @@ import m4t_tester
 
 
 def main():
-    """ Calls the   TEST   functions in this module. """""
+    """ Calls the   TEST   functions in this module. """
     run_test_sum_of_digits()
     run_test_digits_in_cube()
     run_test_digits_in_power()
@@ -215,7 +215,7 @@ def run_test_digits_in_power():
     print('--------------------------------------------------')
 
     expected = 10
-    answer = digits_in_power (8,2)
+    answer = digits_in_power(8,2)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
@@ -231,7 +231,7 @@ def run_test_digits_in_power():
 
 
 def digits_in_power(n, k):
-    return sum_of_digits(n,k)
+    return sum_of_digits(n**k)
     """
     What comes in:  Two positive integers, n and k.
     What goes out:
@@ -253,20 +253,7 @@ def digits_in_power(n, k):
 
 
 def run_test_fancy_sums_of_digits():
-    expected = 1
-    answer = fancy_sums_of_digits(10)
-    print('Test 1 expected:', expected)
-    print('       actual:  ', answer)
 
-    expected = 1
-    answer = fancy_sums_of_digits(20)
-    print('Test 1 expected:', expected)
-    print('       actual:  ', answer)
-
-    expected = 1
-    answer = fancy_sums_of_digits(30)
-    print('Test 1 expected:', expected)
-    print('       actual:  ', answer)
     """ Tests the   fancy_sums_of_digits   function. """
     # -------------------------------------------------------------------------
     # TODO: 7. Implement this function.
@@ -281,6 +268,21 @@ def run_test_fancy_sums_of_digits():
     print('Testing the   fancy_sums_of_digits   function:')
     print('--------------------------------------------------')
 
+    expected = 1
+    answer = fancy_sums_of_digits(10)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 1
+    answer = fancy_sums_of_digits(20)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 1
+    answer = fancy_sums_of_digits(30)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
     # -------------------------------------------------------------------------
     # HINT:  For your 1st test, consider  n=10.  Figure out BY HAND
     # the correct (expected) answer for that test case.  (It's easy.)
@@ -291,10 +293,10 @@ def run_test_fancy_sums_of_digits():
 
 
 def fancy_sums_of_digits(n):
-    return fancy_sums_of_digits(n)
+   
     """
     What comes in:  A positive integer n.
-    What goes out:
+    What goes out:1
       -- Let X denote the   sum   of the digits in (n ** 1000).
       -- Let Y denote the   sum   of the digits in (n ** 999).
       This function RETURNs the sum of the digits in (X ** Y).
@@ -315,6 +317,10 @@ def fancy_sums_of_digits(n):
             -- the sum of the digits in (X ** Y) is 124309 (trust me!)
             -- so this function returns 124309.
     """
+    x = sum_of_digits(n ** 1000)
+    y = sum_of_digits(n ** 999)
+    z = sum_of_digits(x ** y)
+    return z
     # -------------------------------------------------------------------------
     # TODO: 8. Implement and test this function.
     #
