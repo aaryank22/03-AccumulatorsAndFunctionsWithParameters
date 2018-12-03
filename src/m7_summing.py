@@ -54,9 +54,9 @@ def sum_cosines(n):
     total = 0
     for k in range(n):
         if math.cos(k + 1) > 0:
-             total = total + ((k + 1))
+             total = total + (k + 1)
 
-            return total
+    return total
 
 
     """
