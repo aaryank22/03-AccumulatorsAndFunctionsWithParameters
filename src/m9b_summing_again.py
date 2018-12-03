@@ -31,6 +31,7 @@ def run_test_sum_powers():
 
 
 def sum_powers(n, p):
+
     """
     What comes in:  A non-negative integer n
                     and a number p.
