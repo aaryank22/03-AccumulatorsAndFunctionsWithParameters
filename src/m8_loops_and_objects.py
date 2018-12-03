@@ -10,6 +10,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
+import math
 
 
 def main():
@@ -131,7 +132,7 @@ def draw_circles2():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -161,6 +162,7 @@ def draw_circles2():
 
 
 def print_sequence3():
+
     """
     Prints:
       1
@@ -173,7 +175,7 @@ def print_sequence3():
 
 
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement this function, per its doc-string above.
+    # DONE: 6. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -195,7 +197,7 @@ def draw_circles3():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement this function, per its doc-string above.
+    # DONE: 7. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -204,8 +206,25 @@ def draw_circles3():
     print('Running draw_circles3:  See graphics window')
     print('--------------------------------------------------')
 
+    jkl = rg.RoseWindow()
+    width = 300
+    height = 300
+    for k in range(101):
+        radius = (k)
+        center = rg.Point(200,150)
+        lucas = rg.Circle(center, radius)
+        lucas.attach_to(jkl)
+
+    jkl.render()
+    jkl.close_on_mouse_click()
+
 
 def print_cosines():
+
+
+
+
+
     """
     For each of the integers 0  1  2  ... 100,
     prints 80 times the cosine of that integer.
@@ -224,7 +243,7 @@ def print_cosines():
        68.9855097830147
     """
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement this function, per its doc-string above.
+    # DONE: 8. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     #
@@ -239,6 +258,10 @@ def print_cosines():
     print('--------------------------------------------------')
     print('Running print_cosines:')
     print('--------------------------------------------------')
+
+    total = 0
+    for k in range(101):
+        print(math.cos(80 * k))
 
 
 def draw_cosines_and_sines():
@@ -256,7 +279,7 @@ def draw_cosines_and_sines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 9. Implement this function, per its doc-string above.
+    # DONE: 9. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -264,6 +287,18 @@ def draw_cosines_and_sines():
     print('--------------------------------------------------')
     print('Running draw_cosines_and_sines:  See graphics window')
     print('--------------------------------------------------')
+
+    alec  = rg.RoseWindow()
+    width = 400
+    height = 400
+    for k in range(101):
+        radius = 10
+        center = rg.Point(200+(80 * math.cos(k)),(200+(80 * math.sin(k))))
+        hartich = rg.Circle(center, radius)
+        hartich.attach_to(alec)
+
+    alec.render()
+    alec.close_on_mouse_click()
 
 
 # -----------------------------------------------------------------------------
