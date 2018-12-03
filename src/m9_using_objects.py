@@ -100,7 +100,6 @@ def circle_and_rectangle():
     aaryan = rg.Circle(center,radius)
     aaryan.pen = rg.Pen('blue', 5)
     aaryan.attach_to(window)
-
     point1 = rg.Point(25,25)
     point2 = rg.Point(5,300)
     lucas = rg.Rectangle(point1,point2)
@@ -138,10 +137,8 @@ def lines():
     point1 = rg.Point(5,90)
     point2 = rg.Point(90, 90)
     aaryan = rg.Line(point1,point2)
-
     neelie.attach_to(window)
     aaryan.attach_to(window)
-    
     midpoint = neelie.get_midpoint()
     print(midpoint)
     print(midpoint.x)
