@@ -31,14 +31,26 @@ def two_circles():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its green doc-string above.
+    # DONE: 2. Implement this function, per its green doc-string above.
     #    -- ANY two rg.Circle objects that meet the criteria are fine.
     #    -- File  COLORS.pdf  lists all legal color-names.
     # Put a statement in   main   to test this function
     #    (by calling this function).
     # -------------------------------------------------------------------------
 
-    okok = rg.RoseWindow
+    window = rg.RoseWindow()
+    center = rg.Point(100,100)
+    radius = 20
+    aaryan = rg.Circle(center,radius)
+    aaryan.pen = rg.Pen('blue', 3)
+    aaryan.attach_to(window)
+
+    center = rg.Point(200,200)
+    radius = 40
+    lucas = rg.Circle(center,radius)
+    lucas.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
 
 
 
@@ -82,7 +94,19 @@ def circle_and_rectangle():
     # IMPORTANT: Use the DOT TRICK to guess the names of the relevant
     #       instance variables for outline thickness, etc.
     # -------------------------------------------------------------------------
+    window = rg.RoseWindow()
+    center = rg.Point(150,150)
+    radius = 25
+    aaryan = rg.Circle(center,radius)
+    aaryan.pen = rg.Pen('blue', 5)
+    aaryan.attach_to(window)
 
+    point1 = rg.Point(25,25)
+    point2 = rg.Point(5,300)
+    lucas = rg.Rectangle(point1,point2)
+    lucas.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
 
 def lines():
     """
@@ -107,6 +131,33 @@ def lines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # TODO: 4. Implement and test this function.
+
+    window = rg.RoseWindow(400,400)
+    neelie = rg.Line(rg.Point(100,100),rg.Point(200,200))
+    neelie.thickness = 10
+    point1 = rg.Point(5,90)
+    point2 = rg.Point(90, 90)
+    aaryan = rg.Line(point1,point2)
+
+    neelie.attach_to(window)
+    aaryan.attach_to(window)
+    
+    midpoint = neelie.get_midpoint()
+    print(midpoint)
+    print(midpoint.x)
+    print(midpoint.y)
+    window.render()
+    window.close_on_mouse_click()
+
+
+
+
+
+
+
+
+
+
 
 
 # -----------------------------------------------------------------------------
